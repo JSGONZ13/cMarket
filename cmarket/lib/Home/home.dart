@@ -1,9 +1,6 @@
 import 'package:cmarket/Estilos/estilos.dart';
 import 'package:flutter/material.dart';
 
-TextEditingController usuario = new TextEditingController();
-TextEditingController contrasenia = new TextEditingController();
-
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => new _HomeState();
@@ -26,6 +23,7 @@ class _HomeState extends State<Home> {
                 image: AssetImage(
                   'resources/logoMarca.png'
                 ),
+                filterQuality: FilterQuality.high,
                 fit: BoxFit.cover,
               ),
             )),
