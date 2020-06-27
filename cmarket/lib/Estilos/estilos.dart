@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //UsuarioInput
-InputDecoration usuarioDecoracion = new InputDecoration(
+/*InputDecoration usuarioDecoracion = new InputDecoration(
     contentPadding: EdgeInsets.only(left: 20.0),
     enabledBorder: new OutlineInputBorder(
         borderRadius: BorderRadius.circular(30.0),
@@ -12,9 +12,9 @@ InputDecoration usuarioDecoracion = new InputDecoration(
     hintText: 'Usuario',
     hintStyle: TextStyle(color: Colors.grey[800]),
     fillColor: Color(0xFFF9F9F9));
-
+*/
 //ContraseñaInput
-InputDecoration contraseniaDecoracion = new InputDecoration(
+/*InputDecoration contraseniaDecoracion = new InputDecoration(
     contentPadding: EdgeInsets.only(left: 20.0),
     enabledBorder: new OutlineInputBorder(
         borderRadius: BorderRadius.circular(30.0),
@@ -25,3 +25,4 @@ InputDecoration contraseniaDecoracion = new InputDecoration(
     hintText: 'Contraseña',
     hintStyle: TextStyle(color: Colors.grey[800]),
     fillColor: Color(0xFFF9F9F9));
+*/
