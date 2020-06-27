@@ -26,25 +26,6 @@ Center Body = new Center(
         margin: EdgeInsets.only(left: 16, right: 16, bottom: 16),
         child: Center()),
     Container(
-      height: 60.0,
-      margin: EdgeInsets.only(left: 16, right: 16),
-      padding: EdgeInsets.only(left: 20, right: 20, top: 15),
-      child: TextFormField(
-        controller: usuario,
-        decoration: usuarioDecoracion,
-      ),
-    ),
-    Container(
-      height: 60.0,
-      margin: EdgeInsets.only(left: 16, right: 16),
-      padding: EdgeInsets.only(left: 20, right: 20, top: 15),
-      child: TextFormField(
-        obscureText: true,
-        controller: contrasenia,
-        decoration: contraseniaDecoracion,
-      ),
-    ),
-    Container(
         margin: EdgeInsets.only(top: 20.0, left: 16, right: 16),
         child: ButtonTheme(
             minWidth: 150.0,
