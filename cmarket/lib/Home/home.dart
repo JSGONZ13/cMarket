@@ -24,10 +24,7 @@ Center Body = new Center(
   children: <Widget>[
     Container(
         margin: EdgeInsets.only(left: 16, right: 16, bottom: 16),
-        child: Center(
-          child: Image(
-            image: new AssetImage('assets/logoMarcaSticker.png', package: 'cmarket',)),
-        )),
+        child: Center()),
     Container(
       height: 60.0,
       margin: EdgeInsets.only(left: 16, right: 16),
