@@ -1,5 +1,7 @@
-import 'package:cmarket/Estilos/estilos.dart';
+
 import 'package:flutter/material.dart';
+
+
 
 class Home extends StatefulWidget {
   @override
@@ -20,9 +22,7 @@ class _HomeState extends State<Home> {
             margin: EdgeInsets.only(left: 16, right: 16, bottom: 16),
             child: Center(
               child: Image(
-                image: AssetImage(
-                  'resources/logoMarca.png'
-                ),
+                image: AssetImage('resources/logoMarca.png'),
                 filterQuality: FilterQuality.high,
                 fit: BoxFit.cover,
               ),
@@ -33,6 +33,10 @@ class _HomeState extends State<Home> {
                 minWidth: 150.0,
                 height: 50.0,
                 child: RaisedButton(
+                    onPressed: (){
+                      //print('Botón Funcionando');
+                      Navigator.of(context).pushNamed('/mapa');
+                    },
                     child: Text(
                       'EMPEZAR',
                       style: TextStyle(color: Color(0xFFF2F2F2)),
