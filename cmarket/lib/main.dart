@@ -13,9 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      routes: {
-        '/': (context) => Home(), 
-        '/mapa': (context) => Mapa()},
+      debugShowCheckedModeBanner: false,
+      routes: {'/': (context) => Home(), '/mapa': (context) => Mapa()},
     );
   }
 }

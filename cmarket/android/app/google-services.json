@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "932212227240",
+    "firebase_url": "https://cmarket-bf278.firebaseio.com",
+    "project_id": "cmarket-bf278",
+    "storage_bucket": "cmarket-bf278.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932212227240:android:fa86f79e106226a1e7d69d",
+        "android_client_info": {
+          "package_name": "com.example.cmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932212227240-v41bltf1tjbkgutc04dom008gklgvkoe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cmarket",
+            "certificate_hash": "1caf4e77ab60fd8ff8ec9787097a4d9db62ca60c"
+          }
+        },
+        {
+          "client_id": "932212227240-l9actcdhcnuct856m1vbfa62qn6tfgrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoCdSiQyW3MoGDHT93M1EtPbRdBPVkSXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932212227240-l9actcdhcnuct856m1vbfa62qn6tfgrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

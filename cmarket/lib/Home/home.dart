@@ -1,7 +1,4 @@
-
 import 'package:flutter/material.dart';
-
-
 
 class Home extends StatefulWidget {
   @override
@@ -33,7 +30,7 @@ class _HomeState extends State<Home> {
                 minWidth: 150.0,
                 height: 50.0,
                 child: RaisedButton(
-                    onPressed: (){
+                    onPressed: () {
                       //print('Botón Funcionando');
                       Navigator.of(context).pushNamed('/mapa');
                     },
