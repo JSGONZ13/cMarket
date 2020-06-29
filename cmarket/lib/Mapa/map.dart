@@ -72,31 +72,42 @@ class _MapaState extends State<Mapa> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Color(0xFFF9F9F9),
       body: Column(
         children: <Widget>[
           Stack(
             children: <Widget>[
               Container(
-                  height: MediaQuery.of(context).size.height - 150.0,
+                margin: EdgeInsets.only(left:16, right:16, top:40, bottom:0),
+                  height: MediaQuery.of(context).size.height - 190.0,
                   width: double.infinity,
-                  child: mapToggle
-                      ? GoogleMap(
-                          markers: Set<Marker>.of(markers.values),
-                          onMapCreated: onMapCreated,
-                          myLocationEnabled: true,
-                          compassEnabled: true,
-                          zoomGesturesEnabled: true,
-                          initialCameraPosition: CameraPosition(
-                            target: LatLng(currentLocation.latitude,
-                                currentLocation.longitude),
-                            zoom: 14.0,
-                          ),
-                          mapType: MapType.normal)
-                      : Center(
-                          child: Text('Cargando...',
-                              style: TextStyle(
-                                  fontSize: 20.0, color: Color(0xFF0E8AC9))),
-                        )),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0),
+                    child: Align(
+                        alignment: Alignment.bottomRight,
+                        heightFactor: 0.3,
+                        widthFactor: 2.5,
+                        child: mapToggle
+                            ? GoogleMap(
+                                markers: Set<Marker>.of(markers.values),
+                                onMapCreated: onMapCreated,
+                                myLocationEnabled: true,
+                                compassEnabled: true,
+                                zoomGesturesEnabled: true,
+                                zoomControlsEnabled: false,
+                                initialCameraPosition: CameraPosition(
+                                  target: LatLng(currentLocation.latitude,
+                                      currentLocation.longitude),
+                                  zoom: 14.0,
+                                ),
+                                mapType: MapType.normal)
+                            : Center(
+                                child: Text('Cargando...',
+                                    style: TextStyle(
+                                        fontSize: 20.0,
+                                        color: Color(0xFF0E8AC9))),
+                              )),
+                  ))
             ],
           ),
           Row(
