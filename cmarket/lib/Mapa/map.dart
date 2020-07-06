@@ -26,7 +26,6 @@ class _MapaState extends State<Mapa> {
     populateClients();
     super.initState();
   }
-
   onMapCreated(controller) {
     setState(() {
       mapController = controller;
