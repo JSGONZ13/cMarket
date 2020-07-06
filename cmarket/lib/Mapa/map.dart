@@ -78,7 +78,8 @@ class _MapaState extends State<Mapa> {
           Stack(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(left:16, right:16, top:40, bottom:0),
+                  margin:
+                      EdgeInsets.only(left: 16, right: 16, top: 40, bottom: 0),
                   height: MediaQuery.of(context).size.height - 190.0,
                   width: double.infinity,
                   child: ClipRRect(
@@ -98,7 +99,7 @@ class _MapaState extends State<Mapa> {
                                 initialCameraPosition: CameraPosition(
                                   target: LatLng(currentLocation.latitude,
                                       currentLocation.longitude),
-                                  zoom: 14.0,
+                                  zoom: 15.0,
                                 ),
                                 mapType: MapType.normal)
                             : Center(
@@ -131,7 +132,10 @@ class _MapaState extends State<Mapa> {
                         borderRadius: BorderRadius.circular(20.0)),
                     color: Color(0xFF0E8AC9),
                     onPressed: () {
-                      Navigator.of(context).pushNamed('/');
+                      Navigator.of(context).pushNamed(
+                        '/catalogo',
+                        arguments: text,
+                      );
                     },
                     child: Container(
                         padding: EdgeInsets.only(top: 16.0, bottom: 16.0),

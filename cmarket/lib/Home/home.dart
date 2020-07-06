@@ -33,10 +33,10 @@ class _HomeState extends State<Home> {
                 child: RaisedButton(
                     onPressed: () {
                       //print('Botón Funcionando');
-                      Navigator.of(context).pushNamed('/mapa');
+                      Navigator.of(context).pushNamed('/menu');
                     },
                     child: Text(
-                      'EMPEZAR',
+                      'Empezar',
                       style: TextStyle(color: Color(0xFFF2F2F2)),
                     ),
                     color: Color(0xFF0E8AC9),
