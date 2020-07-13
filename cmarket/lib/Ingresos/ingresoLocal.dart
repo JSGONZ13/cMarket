@@ -236,7 +236,7 @@ class _AddLocalState extends State<AddLocal> {
                   return AlertDialog(
                     title: Text('¿Deseas agregar el nuevo local?: '),
                     content: Container(
-                      height: MediaQuery.of(context).size.height / 3,
+                      height: MediaQuery.of(context).size.height / 2.5,
                       child: Column(
                         children: <Widget>[
                           Container(
@@ -392,7 +392,8 @@ class _AddLocalState extends State<AddLocal> {
       "parqueadero": local.parqueadero,
       "servicioDomicilio": local.servicioDomicilo,
       "tarjetaCredito": local.tarjetaCredito,
-      "telefono": local.telefono
+      "telefono": local.telefono,
+      "nombreLocal": local.nombreLocal
     });
   }
 }

@@ -136,7 +136,7 @@ class _LocalCardState extends State<LocalCard> {
   Widget build(BuildContext context) {
     return Card(
         elevation: 2.0,
-        margin: EdgeInsets.only(bottom: 4),
+        margin: EdgeInsets.only(bottom: 16, left: 16, right: 16),
         child: Column(
           children: <Widget>[
             ListTile(

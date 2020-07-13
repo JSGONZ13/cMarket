@@ -52,7 +52,7 @@ class _LocalOnlyState extends State<LocalOnly> {
                             children: <Widget>[
                               Text(
                                 local.nombreLocal,
-                                style: TextStyle(fontSize: 35),
+                                style: TextStyle(fontSize: 20),
                               ),
                               IconButton(
                                   icon: Icon(
