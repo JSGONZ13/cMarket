@@ -46,6 +46,9 @@ class _CatalogoState extends State<Catalogo> {
         wLocales.add(localW);
       });
     });
+    setState(() {
+      result.clear();
+    });
   }
 
   @override
@@ -54,10 +57,16 @@ class _CatalogoState extends State<Catalogo> {
     String textoAux = ModalRoute.of(context).settings.arguments;
     setState(() {
       if (textoAux != null) {
+        locales = [];
+        wLocales = [];
+        result = null;
         texto = textoAux;
         buscar.text = texto;
         loadLocales(texto);
       } else {
+        locales = [];
+        wLocales = [];
+        result = null;
         texto = buscar.text;
         loadLocales(texto);
       }
@@ -88,8 +97,6 @@ class _CatalogoState extends State<Catalogo> {
                 suffixIcon: IconButton(
                   onPressed: () {
                     setState(() {
-                      locales.clear();
-                      wLocales.clear();
                       texto = buscar.text;
                       loadLocales(texto);
                     });
@@ -102,7 +109,7 @@ class _CatalogoState extends State<Catalogo> {
           ),
         ),
         body: Container(
-          height: MediaQuery.of(context).size.height/1.4,
+            height: MediaQuery.of(context).size.height / 1.4,
             margin: EdgeInsets.only(top: 20, left: 16, right: 16),
             child: ListView.builder(
               addAutomaticKeepAlives: false,
@@ -112,11 +119,11 @@ class _CatalogoState extends State<Catalogo> {
               },
             )),
         floatingActionButton: new FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {
-          Navigator.of(context).pushNamed('/ingresoLocal', arguments: 
-          buscar.text);
-        }));
+            child: Icon(Icons.add),
+            onPressed: () {
+              Navigator.of(context)
+                  .pushNamed('/ingresoLocal', arguments: buscar.text);
+            }));
   }
 }
 

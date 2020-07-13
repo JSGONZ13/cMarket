@@ -65,8 +65,11 @@ class _LocalOnlyState extends State<LocalOnly> {
                                         context: context,
                                         builder: (context) {
                                           return AlertDialog(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(20)
+                                            ),
                                             title: Text(
-                                                '¿La información del local está errónea?: '),
+                                                '¿La información del local es errónea?: '),
                                             content: Text(
                                                 'Envíanos un correo al respecto, y corregiremos la información lo más pronto posible'),
                                             actions: <Widget>[
@@ -76,9 +79,9 @@ class _LocalOnlyState extends State<LocalOnly> {
                                                   customLaunch(
                                                       'mailto:jairo99gc@gmail.com?subject=Información errónea, local ' +
                                                           local.nombreLocal +
-                                                          '%20subject&body=Quisiera informar que la información del local ' +
+                                                          '&body=Quisiera informar que la información del local ' +
                                                           local.nombreLocal +
-                                                          ' está errónea...');
+                                                          ' es errónea...');
                                                   Navigator.of(context).pop();
                                                 },
                                               )

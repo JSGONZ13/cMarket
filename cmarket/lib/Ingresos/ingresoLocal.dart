@@ -380,7 +380,7 @@ class _AddLocalState extends State<AddLocal> {
           }),
     );
   }
-
+//Envío de documento a Firestore
   void addData(Local local) async {
     var firestoreADD = Firestore.instance;
     firestoreADD.collection('locales').document().setData({
