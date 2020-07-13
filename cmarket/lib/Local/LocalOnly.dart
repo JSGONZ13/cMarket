@@ -22,7 +22,7 @@ class _LocalOnlyState extends State<LocalOnly> {
     if (await canLaunch(command)) {
       await launch(command);
     } else {
-      print('No se pudo llamar a: ' + command);
+      print('No se pudo conectar a: ' + command);
     }
   }
 
@@ -31,23 +31,62 @@ class _LocalOnlyState extends State<LocalOnly> {
     return new Scaffold(
         backgroundColor: Color(0xFFFCCC2B),
         body: new Center(
-            child: Column(
+            child: Container(
+                child: Column(
           children: <Widget>[
             Container(
                 height: MediaQuery.of(context).size.height - 170,
                 margin: EdgeInsets.only(left: 16, right: 16, top: 60),
                 child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
                   child: Padding(
                     padding: EdgeInsets.all(16),
                     child: Column(
                       children: <Widget>[
                         Container(
                             child: ListTile(
-                          title: Text(
-                            local.nombreLocal,
-                            style: TextStyle(
-                              fontSize: 30,
-                            ),
+                          title: Wrap(
+                            spacing: 10,
+                            runSpacing: 20.0,
+                            children: <Widget>[
+                              Text(
+                                local.nombreLocal,
+                                style: TextStyle(fontSize: 35),
+                              ),
+                              IconButton(
+                                  icon: Icon(
+                                    Icons.edit,
+                                    size: 20,
+                                    color: Color(0xFF0E8AC9),
+                                  ),
+                                  onPressed: () {
+                                    return showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return AlertDialog(
+                                            title: Text(
+                                                '¿La información del local está errónea?: '),
+                                            content: Text(
+                                                'Envíanos un correo al respecto, y corregiremos la información lo más pronto posible'),
+                                            actions: <Widget>[
+                                              FlatButton(
+                                                child: Text('Enviar solicitud'),
+                                                onPressed: () {
+                                                  customLaunch(
+                                                      'mailto:jairo99gc@gmail.com?subject=Información errónea, local ' +
+                                                          local.nombreLocal +
+                                                          '%20subject&body=Quisiera informar que la información del local ' +
+                                                          local.nombreLocal +
+                                                          ' está errónea...');
+                                                  Navigator.of(context).pop();
+                                                },
+                                              )
+                                            ],
+                                          );
+                                        });
+                                  })
+                            ],
                           ),
                           subtitle:
                               Text('Línea Comercial: ' + local.lineaComercial),
@@ -120,6 +159,6 @@ class _LocalOnlyState extends State<LocalOnly> {
                   ],
                 ))
           ],
-        )));
+        ))));
   }
 }

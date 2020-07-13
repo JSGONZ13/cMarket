@@ -102,6 +102,7 @@ class _CatalogoState extends State<Catalogo> {
           ),
         ),
         body: Container(
+          height: MediaQuery.of(context).size.height/1.4,
             margin: EdgeInsets.only(top: 20, left: 16, right: 16),
             child: ListView.builder(
               addAutomaticKeepAlives: false,
@@ -109,7 +110,13 @@ class _CatalogoState extends State<Catalogo> {
               itemBuilder: (context, index) {
                 return wLocales[index];
               },
-            )));
+            )),
+        floatingActionButton: new FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+          Navigator.of(context).pushNamed('/ingresoLocal', arguments: 
+          buscar.text);
+        }));
   }
 }
 

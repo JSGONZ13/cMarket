@@ -1,4 +1,5 @@
 import 'package:cmarket/Catalogo/catalogo.dart';
+import 'package:cmarket/Ingresos/ingresoLocal.dart';
 import 'package:cmarket/Local/LocalOnly.dart';
 import 'package:cmarket/Mapa/map.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       '/mapa': (context) => Mapa(),
       '/menu': (context) => Menu(),
       '/catalogo':(context) => Catalogo(),
-      '/localOnly': (context) => LocalOnly()
+      '/localOnly': (context) => LocalOnly(),
+      '/ingresoLocal':(context) => AddLocal(),
     });
   }
 }
