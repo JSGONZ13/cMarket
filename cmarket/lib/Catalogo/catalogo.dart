@@ -76,6 +76,7 @@ class _CatalogoState extends State<Catalogo> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Color(0xFFF2F2F2),
         appBar: AppBar(
           backgroundColor: Color(0xFF0E8AC9),
           title: TextField(
@@ -109,7 +110,7 @@ class _CatalogoState extends State<Catalogo> {
           ),
         ),
         body: Container(
-            height: MediaQuery.of(context).size.height / 1.4,
+            height: MediaQuery.of(context).size.height / 1.37,
             margin: EdgeInsets.only(top: 20, left: 16, right: 16),
             child: ListView.builder(
               addAutomaticKeepAlives: false,
@@ -142,11 +143,15 @@ class _LocalCardState extends State<LocalCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
         elevation: 2.0,
-        margin: EdgeInsets.only(bottom: 16, left: 16, right: 16),
+        margin: EdgeInsets.only(bottom: 10, left: 4, right: 4),
         child: Column(
           children: <Widget>[
             ListTile(
+              contentPadding: EdgeInsets.all(16),
               title: Text(
                 widget.aux.nombreLocal,
                 style: TextStyle(fontSize: 25),
@@ -154,6 +159,7 @@ class _LocalCardState extends State<LocalCard> {
               subtitle: Text('Línea comercial: ' + widget.aux.lineaComercial),
             ),
             Container(
+              margin: EdgeInsets.only(right: 5),
                 child: Align(
                     alignment: Alignment.bottomRight,
                     child: RaisedButton(

@@ -74,7 +74,10 @@ class _LocalOnlyState extends State<LocalOnly> {
                                                 'Envíanos un correo al respecto, y corregiremos la información lo más pronto posible'),
                                             actions: <Widget>[
                                               FlatButton(
-                                                child: Text('Enviar solicitud'),
+                                                child: Container(
+                                                  margin: EdgeInsets.only(right:10),
+                                                  child: Text('Enviar solicitud')
+                                                ),
                                                 onPressed: () {
                                                   customLaunch(
                                                       'mailto:jairo99gc@gmail.com?subject=Información errónea, local ' +
