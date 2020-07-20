@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
                 child: RaisedButton(
                     onPressed: () {
                       //print('Botón Funcionando');
-                      Navigator.of(context).pushNamed('/menu');
+                      Navigator.of(context).pushNamed('/login');
                     },
                     child: Text(
                       'Empezar',

@@ -1,3 +1,4 @@
+import 'package:cmarket/Services/auth.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatefulWidget {
@@ -6,6 +7,7 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  final AuthService auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -45,6 +47,24 @@ class _MenuState extends State<Menu> {
                       style: TextStyle(color: Color(0xFFF2F2F2)),
                     ),
                     color: Color(0xFF0E8AC9),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24.0))))),
+                        Container(
+            margin: EdgeInsets.only(top: 20.0, left: 16, right: 16),
+            child: ButtonTheme(
+                minWidth: 150.0,
+                height: 50.0,
+                child: RaisedButton(
+                    onPressed: () async {
+                      //print('Botón Funcionando');
+                      await auth.signOut();
+                      
+                    },
+                    child: Text(
+                      'Salir',
+                      style: TextStyle(color: Color(0xFFF2F2F2)),
+                    ),
+                    color: Colors.red,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24.0)))))
       ],
